@@ -1,0 +1,182 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Volodymyr Kondratenko}}\\
+	Calgary, AB, Canada $\cdot$ vld.kondratenk@gmail.com $\cdot$ 5874395750 $\cdot$ https://www.linkedin.com/in/bakbukdibbuk/\\
+\end{center}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
+\header{Objective}
+\vspace{1mm}
+
+DevOps Engineer with background designing, testing and implementing infrastructure and applications. Talented performer with over 6 years of experience using source control tools to identify and fix bugs in code. Consistent team player with exemplary multitasking skills. Critical thinking with extensive understanding of high availability architecture and concepts. Purpose-driven professional with capacity to be strong team player plus work effectively independently. Complex problem-solver with analytical and driven mindset. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code. Respectful self-motivator gifted at finding reliable solutions for software issues. Accustomed to working with cross-cultural, global teams. Detail-oriented team player with strong organizational skills. Ability to handle multiple projects simultaneously with a high degree of accuracy. Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willingness to take on added responsibilities to meet team goals. To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.\\ 
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Forcepoint} \hfill Tel Aviv, Israel\\
+\textit{DevOps Engineer} \hfill Feb 2021 - Jan 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Participants of the DevOps Squad team aimed to accelerate digital transformations through DevOps Culture.
+	\item 	Created the first ansible collection to decrease repetitive code in various playbooks.
+	\item 	Engaged in a team as an engineer to transform CI/CD Jenkins jobs into GitHub Actions by applying the git branching strategy and using gitversion.
+	\item 	Suggested various points for monitoring to keep attention on cloud resource utilization to save costs.
+	\item 	Quickly troubleshot and resolved network, hardware, software, and performance issues, including during rotating on-call emergency response shifts.
+	\item 	Served as the technical focal point between the integration, R\&D, support, and operations teams, demonstrating exceptional communication and coordination skills.
+\end{itemize}
+\textbf{Forcepoint} \hfill Tel Aviv, Israel\\
+\textit{Software development engineer in test} \hfill Feb 2019 - Feb 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item 	Collaborated with the automation team to design and develop automated test suites for the website using Java and Selenium and worked with large databases using SQL.
+	\item 	Worked with management to resolve issues and report on the quality of system maintenance activity and new releases.
+	\item 	Communicated directly with software developers, test engineers, product owners, business analysts, and project leaders.
+	\item 	Served as the technical focal point between the integration, R\&D, support, and operations teams, demonstrating exceptional communication and coordination skills.
+\end{itemize}
+\textbf{JL Ltd} \hfill Bnei Brak, Israel\\
+\textit{DevOps/QA and automation engineer} \hfill Jan 2018 - Feb 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Apply and use DevOps and Automation testing practices for crafting solutions in the Automotive Industry.
+	\item 	Improved CI/CD Dashboard according to stakeholders\textquotesingle{} requirements to support 12000+ tests, 10+ branches, and several daily builds used by Devs, QAs, Managers, and SMEs, up to 100 persons in total.
+	\item 	Monitored, supported, and supplied reports for bug tracking and defect resolution for a mobile-based product.
+	\item 	Created and supported an automated framework and scripts using JavaScript and Node.js for new and emerging rich media and related products.
+	\item 	Improved CI/CD process to use AWS instead of VMware vCloud for CI as PoC.
+	\item 	Worked with domain experts and developers to create and execute test plans and worked closely with the development team, application support team, and Frontier help desk team to troubleshoot issues in production and development environments.
+\end{itemize}
+\textbf{Inetex} \hfill Rehovot, Israel\\
+\textit{Software QA Manual \& Automation Tester} \hfill Dec 2016 - Apr 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item 	Tested web-based client-server applications and developed test plans and test cases for GUI.
+	\item 	Conducted manual and automation testing according to test cases and tracked bugs with Bugzilla.
+	\item 	Developed, maintained, improved, and executed Selenium testing scripts (Selenium Web Driver using Java and TestNG).
+	\item 	Worked closely with software developers and other stakeholders in the software development process to ensure products met required quality standards.
+\end{itemize}
+\textbf{DEC} \hfill Donetsk, Ukraine\\
+\textit{System administrator} \hfill Sep 2010 - Jun 2014\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item 	Provided company-wide desktop and remote help desk support to ensure continuous and efficient service for employees.
+	\item 	Configured, installed, and maintained hardware and software equipment, including routers, switches, and network appliances.
+	\item 	Kept up to date on relevant technology developments and upgraded operating systems as needed to stay competitive.
+	\item 	Ensured network and IP connectivity and established uptime level agreements for all application servers and back-end infrastructure.
+	\item 	Responsible for networking (Cisco), server management (Linux, Windows, FreeBSD), user support, VoIP, ITIL implementation.
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{Donetsk National Technical University}\hfill Donetsk, Ukraine\\
+Bachelor\textquotesingle{}s degree ,Automation Engineer in Telecommunication Engineering \hfill Sep 2003 - Aug 2008\\
+\vspace{2mm}
+\textbf{Tel-ran Educational Centre}\hfill Rehovot, Israel\\
+Diploma One-Year Course in Automation Quality Assurance \hfill Sep 2015 - Sep 2016\\
+\vspace{2mm} 
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Versioning:  & Git, GitHub, GitLab, BitBucket \\
+	CI/CD:   & Jenkins, GitCI, GitHub Actions \\
+	Infrastructure As A Code: &  Ansible, Terraform \\
+	Build Tools:     &  Maven, rpmbuild \\
+	Ticket Tracking:  &  JIRA, Trello, PagerDuty \\
+	Containerization:  & Docker, Kubernetes \\
+	Operating Systems:  &  Windows, RHEL, CENTOS 6/7/8, CloudLinux, Ubuntu/Debian, MacOSX \\
+	AWS:  & EC2, S3, RDS, Lambda, Kinesis, Cloud Watch, VPC, Route53, ELB, IAM, Glacier \\
+	Programing Languages: & Python, NodeJS, Java \\
+	Scripting:  & PowerShell, Bash, Groovy \\
+	Web servers:  & Apache Tomcat, Nginx \\
+	Database Management:  & MongoDB, Postgress, MySQL, ElasticSearch \\
+	Testing tools:  & Selenium, Postman, Swagger, JMeter, Cucumber \\
+	Monitoring: & DataDog, Nagios, Kibana \\
+	Virtualisation:  & VMWare, VBox \\
+\end{tabular}
+\vspace{2mm}
+
+
+
+
+
+\ 
+\end{document}
