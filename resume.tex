@@ -1,182 +1,265 @@
-\documentclass[a4paper]{article}
-    \usepackage{fullpage}
-    \usepackage{amsmath}
-    \usepackage{amssymb}
-    \usepackage{textcomp}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-    \textheight=10in
-    \pagestyle{empty}
-    \raggedright
-    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
-
-    %\renewcommand{\encodingdefault}{cg}
-%\renewcommand{\rmdefault}{lgrcmr}
-
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
-
-% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\area} [2] {
-    \vspace*{-9pt}
-    \begin{verse}
-        \textbf{#1}   #2
-    \end{verse}
-}
-
-\newcommand{\lineunder} {
-    \vspace*{-8pt} \\
-    \hspace*{-18pt} \hrulefill \\
-}
-
-\newcommand{\header} [1] {
-    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
-    \vspace*{-6pt} \lineunder
-}
-
-\newcommand{\employer} [3] {
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
-
-\newcommand{\contact} [3] {
-    \vspace*{-10pt}
-    \begin{center}
-        {\Huge \scshape {#1}}\\
-        #2 \\ #3
-    \end{center}
-    \vspace*{-8pt}
-}
-
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-}
-% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
-
-    \begin{document}
-\vspace*{-40pt}
-
-    
-
-%==== Profile ====%
-\vspace*{-10pt}
-\begin{center}
-	{\Huge \scshape {Volodymyr Kondratenko}}\\
-	Calgary, AB, Canada $\cdot$ vld.kondratenk@gmail.com $\cdot$ 5874395750 $\cdot$ https://www.linkedin.com/in/bakbukdibbuk/\\
-\end{center}
-
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cies Resume/CV
+% LaTeX Template
+% Version 1.1 (20/7/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Cies Breijs (cies@kde.nl)
+% https://github.com/cies/resume with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	OBJECTIVE SECTION
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\header{Objective}
-\vspace{1mm}
 
-DevOps Engineer with background designing, testing and implementing infrastructure and applications. Talented performer with over 6 years of experience using source control tools to identify and fix bugs in code. Consistent team player with exemplary multitasking skills. Critical thinking with extensive understanding of high availability architecture and concepts. Purpose-driven professional with capacity to be strong team player plus work effectively independently. Complex problem-solver with analytical and driven mindset. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code. Respectful self-motivator gifted at finding reliable solutions for software issues. Accustomed to working with cross-cultural, global teams. Detail-oriented team player with strong organizational skills. Ability to handle multiple projects simultaneously with a high degree of accuracy. Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willingness to take on added responsibilities to meet team goals. To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.\\ 
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
 
+\include{structure} % Include structure.tex which contains packages and document layout definitions
 
-%==== Experience ====%
-\header{Experience}
-\vspace{1mm}
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
 
-\textbf{Forcepoint} \hfill Tel Aviv, Israel\\
-\textit{DevOps Engineer} \hfill Feb 2021 - Jan 2023\\
-\vspace{-1mm}
+\begin{document} 
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Volodymyr Kondratenko}{}  % Your name and date of birth or subtitle
+
+\noindent\href{mailto:vld.kondratenk@gmail.com}{vld.kondratenk@gmail.com}\bull % Your email address
+\textsmaller{+}1 (587) 439-5750\bull  % Your phone number(s) and Skype username
+\href{https://www.linkedin.com/in/bakbukdibbuk/}{LinkedIn}\\ % Your URL
+Calgary, AB\bull 
+
+\spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Summary} % Root section title
+
+\vspace{-1.3em} % Reduce whitespace after the Summary heading and the two-column content
+
+\begin{multicols}{2}  % Start a two-column layout
+DevOps Engineer with background designing, testing and implementing infrastructure and applications. Talented performer with over 6 years of experience using source control tools to identify and fix bugs in code. Consistent team player with exemplary multitasking skills. Critical thinking with extensive understanding of high availability architecture and concepts. Purpose-driven professional with capacity to be strong team player plus work effectively independently. Complex problem-solver with analytical and driven mindset. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code. Respectful self-motivator gifted at finding reliable solutions for software issues. Accustomed to working with cross-cultural, global teams. Detail-oriented team player with strong organizational skills. Ability to handle multiple projects simultaneously with a high degree of accuracy. Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willingness to take on added responsibilities to meet team goals. To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.
+\end{multicols}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Experience} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{https://forcepoint.com/}{Forcepoint}}
+{\textsc{Tel Aviv, Israel}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{DevOps} Engineer}
+{Feb '21 -- Jan '23}
+{\bodytext{Participants of the DevOps Squad team aimed to accelerate digital transformations through DevOps Culture.
 \begin{itemize} \itemsep 1pt
-	\item Participants of the DevOps Squad team aimed to accelerate digital transformations through DevOps Culture.
 	\item 	Created the first ansible collection to decrease repetitive code in various playbooks.
 	\item 	Engaged in a team as an engineer to transform CI/CD Jenkins jobs into GitHub Actions by applying the git branching strategy and using gitversion.
 	\item 	Suggested various points for monitoring to keep attention on cloud resource utilization to save costs.
 	\item 	Quickly troubleshot and resolved network, hardware, software, and performance issues, including during rotating on-call emergency response shifts.
 	\item 	Served as the technical focal point between the integration, R\&D, support, and operations teams, demonstrating exceptional communication and coordination skills.
 \end{itemize}
-\textbf{Forcepoint} \hfill Tel Aviv, Israel\\
-\textit{Software development engineer in test} \hfill Feb 2019 - Feb 2021\\
-\vspace{-1mm}
+}}}
+
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{https://forcepoint.com/}{Forcepoint}}
+{\textsc{Tel Aviv, Israel}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{Software development engineer} in test}
+{Feb '19 -- Feb '21}
+{\bodytext{Participants of the DevOps Squad team aimed to accelerate digital transformations through DevOps Culture.
 \begin{itemize} \itemsep 1pt
 	\item 	Collaborated with the automation team to design and develop automated test suites for the website using Java and Selenium and worked with large databases using SQL.
 	\item 	Worked with management to resolve issues and report on the quality of system maintenance activity and new releases.
 	\item 	Communicated directly with software developers, test engineers, product owners, business analysts, and project leaders.
 	\item 	Served as the technical focal point between the integration, R\&D, support, and operations teams, demonstrating exceptional communication and coordination skills.
 \end{itemize}
-\textbf{JL Ltd} \hfill Bnei Brak, Israel\\
-\textit{DevOps/QA and automation engineer} \hfill Jan 2018 - Feb 2021\\
-\vspace{-1mm}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{}{JL LTD}}
+{\textsc{Bnei Brak, \acr{Israel}}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{DevOps/QA} and automation engineer}
+{Jan '18 -- Feb '21}
+{\bodytext{Applied and use DevOps and Automation testing practices for crafting solutions in the Automotive Industry.
 \begin{itemize} \itemsep 1pt
-	\item Apply and use DevOps and Automation testing practices for crafting solutions in the Automotive Industry.
 	\item 	Improved CI/CD Dashboard according to stakeholders\textquotesingle{} requirements to support 12000+ tests, 10+ branches, and several daily builds used by Devs, QAs, Managers, and SMEs, up to 100 persons in total.
 	\item 	Monitored, supported, and supplied reports for bug tracking and defect resolution for a mobile-based product.
 	\item 	Created and supported an automated framework and scripts using JavaScript and Node.js for new and emerging rich media and related products.
 	\item 	Improved CI/CD process to use AWS instead of VMware vCloud for CI as PoC.
 	\item 	Worked with domain experts and developers to create and execute test plans and worked closely with the development team, application support team, and Frontier help desk team to troubleshoot issues in production and development environments.
 \end{itemize}
-\textbf{Inetex} \hfill Rehovot, Israel\\
-\textit{Software QA Manual \& Automation Tester} \hfill Dec 2016 - Apr 2018\\
-\vspace{-1mm}
+}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{}{Inetex}}
+{\textsc{Rehovot, \acr{Israel}}} {
+
+
+\headedsubsection % Job title entry for the current employer
+{\acr{Software QA Manual} and automation tester}
+{Dec '16 -- Apr '18}
+{\bodytext{
 \begin{itemize} \itemsep 1pt
 	\item 	Tested web-based client-server applications and developed test plans and test cases for GUI.
-	\item 	Conducted manual and automation testing according to test cases and tracked bugs with Bugzilla.
+	\item 	MConducted manual and automation testing according to test cases and tracked bugs with Bugzilla.
 	\item 	Developed, maintained, improved, and executed Selenium testing scripts (Selenium Web Driver using Java and TestNG).
 	\item 	Worked closely with software developers and other stakeholders in the software development process to ensure products met required quality standards.
 \end{itemize}
-\textbf{DEC} \hfill Donetsk, Ukraine\\
-\textit{System administrator} \hfill Sep 2010 - Jun 2014\\
-\vspace{-1mm}
+}}
+}
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{}{DEC LTD}}
+{\textsc{Donetsk, \acr{Ukraine}}} {
+
+\headedsubsection % Job title entry for the current employer
+{\acr{System} administrator}
+{Sep '10 -- Jun '14}
+{\bodytext{
 \begin{itemize} \itemsep 1pt
 	\item 	Provided company-wide desktop and remote help desk support to ensure continuous and efficient service for employees.
 	\item 	Configured, installed, and maintained hardware and software equipment, including routers, switches, and network appliances.
 	\item 	Kept up to date on relevant technology developments and upgraded operating systems as needed to stay competitive.
 	\item 	Ensured network and IP connectivity and established uptime level agreements for all application servers and back-end infrastructure.
-	\item 	Responsible for networking (Cisco), server management (Linux, Windows, FreeBSD), user support, VoIP, ITIL implementation.
+	\item 	Responsible for networking (Cisco, Juniper), server management (Linux, Windows, FreeBSD), user support, VoIP, ITIL implementation.
 \end{itemize}
+}}
+}
 
-%==== Education ====%
-\header{Education}
-\textbf{Donetsk National Technical University}\hfill Donetsk, Ukraine\\
-Bachelor\textquotesingle{}s degree ,Automation Engineer in Telecommunication Engineering \hfill Sep 2003 - Aug 2008\\
-\vspace{2mm}
-\textbf{Tel-ran Educational Centre}\hfill Rehovot, Israel\\
-Diploma One-Year Course in Automation Quality Assurance \hfill Sep 2015 - Sep 2016\\
-\vspace{2mm} 
+%------------------------------------------------
 
-\header{Skills}
-\begin{tabular}{ l l }
-	Versioning:  & Git, GitHub, GitLab, BitBucket \\
-	CI/CD:   & Jenkins, GitCI, GitHub Actions \\
-	Infrastructure As A Code: &  Ansible, Terraform \\
-	Build Tools:     &  Maven, rpmbuild \\
-	Ticket Tracking:  &  JIRA, Trello, PagerDuty \\
-	Containerization:  & Docker, Kubernetes \\
-	Operating Systems:  &  Windows, RHEL, CENTOS 6/7/8, CloudLinux, Ubuntu/Debian, MacOSX \\
-	AWS:  & EC2, S3, RDS, Lambda, Kinesis, Cloud Watch, VPC, Route53, ELB, IAM, Glacier \\
-	Programing Languages: & Python, NodeJS, Java \\
-	Scripting:  & PowerShell, Bash, Groovy \\
-	Web servers:  & Apache Tomcat, Nginx \\
-	Database Management:  & MongoDB, Postgress, MySQL, ElasticSearch \\
-	Testing tools:  & Selenium, Postman, Swagger, JMeter, Cucumber \\
-	Monitoring: & DataDog, Nagios, Kibana \\
-	Virtualisation:  & VMWare, VBox \\
-\end{tabular}
-\vspace{2mm}
+\begin{center}
+\textit{Please refer to \href{http://www.linkedin.com/in/bakbukdibbuk}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
+\end{center}
 
+%------------------------------------------------
 
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
 
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
+\roottitle{Education} % Top level section
 
-\ 
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Tel-ran Educational Centre}
+{\textsc{Rehovot, \acr{Israel}}}{
+
+\headedsubsection % Job title entry for the current employer
+{One-Year Course in Automation Quality Assurance}
+{2015 -- 2016}
+{\bodytext{}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Donetsk National Technical University}
+{\textsc{Donetsk, \acr{Ukraine}}}{
+
+\headedsubsection % Job title entry for the current employer
+{Bachelors degree in Telecommunication Engineering}
+{2003 -- 2008} {}
+}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Skills} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Versioning:}
+{Git, GitHub, GitLab, BitBucket.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{CI/CD:}
+{Jenkins, GitCI, GitHub Actions.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Infarstructure as a code:}
+{Ansible, Terraform, AWS CloudFormation, Nix.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Ticket Tracking:}
+{JIRA, Trello, PagerDuty.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Containerization:}
+{Docker, Kubernetes, AWS  Elastic Container Service.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Operating Systems:}
+{Windows, RHEL, CENTOS 6/7/8, CloudLinux, Ubuntu/Debian, Archlinux, NixOS, MacOSX.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{AWS:}
+{EC2, S3, RDS, Lambda, Kinesis, Cloud Watch, VPC, Route53, ELB, IAM, API Gateway.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Programing Languages:}
+{Python, NodeJS, Java.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Scripting:}
+{PowerShell, Bash, Groovy.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Database Management:}
+{MongoDB, Postgress, MySQL, ElasticSearch.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Testing tools:}
+{Selenium, Postman, Swagger, JMeter, Cucumber.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Monitoring:}
+{DataDog, Nagios, Kibana.}
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Virtualisation:}
+{VMware, Vbox, KVM.}
+
+%------------------------------------------------
+\roottitle% Special section that has an inline header with a 'hanging' paragraph
+{Natural languages:}
+{Ukrainian \textit{(mother tongue)}, Russian \textit{(mother tongue)}, Hebrew \textit{(full professional proficiency)}, English \textit{(full professional proficiency)}.}
+
+%------------------------------------------------
+
+\spacedhrule{1.6em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Interests} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Non-exhaustive and in alphabetical order:}
+{ Buddhism, Cooking, Horror movies, Music, Philosophy, Video games.}
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
